@@ -1,0 +1,23 @@
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: local("PT Sans"),
+  url('../fonts/web/ptsans.woff2') format("woff2"),
+  url('../fonts/web/ptsans.woff') format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: local("PT Sans"),
+  url('../fonts/web/ptsansbold.woff2') format("woff2"),
+  url('../fonts/web/ptsansbold.woff') format("woff");
+}
+
+html, body {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
