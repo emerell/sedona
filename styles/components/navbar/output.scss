@@ -1,0 +1,71 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.navbar {
+  position: relative;
+  text-align: center;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu-item {
+  padding: 1rem;
+  font-size: $typography-text-medium;
+  color: $color-primary-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
+.navbar__logo {
+  width: 8.625rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.navbar__switcher {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  color: $color-primary-active;
+  background-color: transparent;
+}
+
+.navbar__switcher:hover {
+  background-color: $color-form-control-hover;
+}
+
+@include tablet {
+  .navbar__item {
+    flex-grow: 0;
+  }
+
+  .item-central {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar__switcher-burger, .navbar__switcher {
+    display: none;
+  }
+
+}
+
+@include mobile {
+  .navbar__menu {
+    padding-top: 4.4rem;
+    flex-direction: column;
+  }
+}

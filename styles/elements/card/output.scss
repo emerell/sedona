@@ -1,0 +1,59 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.card {
+  background-color: $color-primary;
+}
+
+@include mobile {
+  .mobile\:p-card {
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+}
+
+.card__title {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 10rem;
+  line-height: 1.312rem;
+  color: $color-text;
+  font-size: $typography-h2;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.card__number {
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-text;
+}
+
+.card__cental-item {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.card__description {
+  padding-right: 3.5rem;
+  padding-left: 3.5rem;
+  line-height: 1.312rem;
+  color: $color-text;
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@include tablet {
+  .card {
+    flex-basis: 33.33%;
+  }
+
+  .tablet\:p-card {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+}

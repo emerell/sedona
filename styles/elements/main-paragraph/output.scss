@@ -1,0 +1,23 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.main-paragraph {
+  padding: 3.75rem 7rem 2.31rem;
+  line-height: 1.625rem;
+  font-size: $typography-h2;
+  color: $color-primary-text;
+  font-weight: bold;
+  background-color: $color-text;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+@include tablet {
+  .main-paragraph {
+    padding: 3.75rem 30% 2.31rem;
+  }
+
+}
+
