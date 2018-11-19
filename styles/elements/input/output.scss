@@ -1,0 +1,45 @@
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.input-group {
+  position: relative;
+}
+
+.input-group__icon {
+  position: absolute;
+  right: 0;
+  top: 54%;
+  transform: translateY(-50%);
+  margin-right: 1rem;
+  cursor: pointer;
+
+}
+
+.calendar {
+  path{
+    fill:$color-form-icon;
+  }
+}
+
+.input {
+  padding: 5px 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0.8rem;
+  border: none;
+  color: $color-primary-text;
+  background-color: $color-form-control;
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.625rem;
+}
+
+.input--large {
+  width: 345px;
+}
+
+.input--small {
+  width: 112px;
+  text-align: center;
+}

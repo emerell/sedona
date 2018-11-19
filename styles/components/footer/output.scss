@@ -1,0 +1,48 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.footer {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-text;
+}
+
+.footer__tag {
+  color: $color-primary-text;
+  font-size: $typography-h2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+
+  path{
+    fill: $color-primary-text;
+  }
+}
+
+ .footer__created {
+   color: $color-primary-text;
+   font-size: $typography-text-small;
+   text-transform: uppercase;
+   margin-right: 7px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+
+}
+//
+//.footer-links__item {
+//  background-color: $color-primary;
+//}
+
+.mr-6 {
+  margin-right: 6px;
+}

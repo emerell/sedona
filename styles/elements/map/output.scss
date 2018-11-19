@@ -1,0 +1,31 @@
+@import  "../../units/colors/utils";
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 507px;
+  overflow: hidden;
+}
+
+.map {
+  z-index: -1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: $color-text;
+
+  @supports (object-fit: cover)  {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
