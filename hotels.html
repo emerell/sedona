@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -28,21 +28,21 @@
         <form>
             <fieldset>
                 <legend>Инфраструктура:</legend>
-                <input type="checkbox">Бассейн
-                <input type="checkbox">Парковка
-                <input type="checkbox">wi-fi
+                <input type="checkbox" name="infrastructure" value="pool">Бассейн
+                <input type="checkbox" name="infrastructure" value="parking">Парковка
+                <input type="checkbox" name="infrastructure" value="wi-fi">wi-fi
             </fieldset>
             <fieldset>
                 <legend>Тип жилья:</legend>
-                <input type="checkbox">Гостиница
-                <input type="checkbox">Мотель
-                <input type="checkbox">Апартаменты
+                <input type="checkbox" name="type-of-accommodation" value="hotel">Гостиница
+                <input type="checkbox" name="type-of-accommodation" value="motel">Мотель
+                <input type="checkbox" name="type-of-accommodation" value="apartments">Апартаменты
             </fieldset>
             <fieldset>
                 <legend>Стоимость в сутки:</legend>
                 <span>от 0</span>
                 <span>до 3000</span>
-                <input type="range">
+                <input type="range" name="range">
             </fieldset>
             <button type="submit">Показать</button>
         </form>
@@ -55,17 +55,17 @@
             <h3>Сортировка:</h3>
             <ul>
                 <li>
-                    <h4>По цене</h4>
+                    <p>По цене</p>
                 </li>
                 <li>
-                    <h4>По типу</h4>
+                    <p>По типу</p>
                 </li>
                 <li>
-                    <h4>По рейтингу</h4>
+                    <p>По рейтингу</p>
                 </li>
             </ul>
-            <button type="button"></button>
-            <button type="button"></button>
+            <button type="button" aria-label="Сортировать по возрастанию"></button>
+            <button type="button" aria-label="Сортировать по убыванию"></button>
         </section>
         <ul>
             <li>
@@ -77,7 +77,7 @@
                 </p>
                 <a href="#">Подробнее</a>
                 <a href="#">Забронировать</a>
-                <span></span>
+                <span aria-label="rating"></span>
                 <span>Рейтинг:8.5</span>
             </li>
             <li>
@@ -113,9 +113,9 @@
     </p>
 
     <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Youtube</a></li>
+        <li><a href="#" aria-label="twitter">Twitter</a></li>
+        <li><a href="#" aria-label="facebook">Facebook</a></li>
+        <li><a href="#"aria-label="youtube">Youtube</a></li>
     </ul>
 
     <p>
