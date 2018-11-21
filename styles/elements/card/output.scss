@@ -21,6 +21,14 @@
   .card--btm-border {
     border-bottom: 2px solid $color-divider;
   }
+
+  .mobile\:flex {
+    display: flex;
+  }
+
+  .mobile\:ml-27 {
+    margin-left: 27px;
+  }
 }
 
 .card__title {
@@ -49,13 +57,6 @@
   text-transform: uppercase;
 }
 
-.card__description--black {
-  line-height: 1.312rem;
-  color: $color-text;
-  font-size: $typography-text-small;
-  text-transform: uppercase;
-}
-
 @include tablet {
   .card {
     flex-basis: 33.33%;
@@ -68,8 +69,9 @@
   }
 
   .card__description {
-    margin-right: 4rem;
-    margin-left: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 300px;
     text-align: center;
   }
 
@@ -80,12 +82,8 @@
   }
 
   .card__description--black {
-    margin-right: 4rem;
-    margin-left: 4rem;
     color: $color-primary-text;
-    text-align: center;
   }
-
 
 }
 

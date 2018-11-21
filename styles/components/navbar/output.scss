@@ -2,6 +2,9 @@
 @import "../../units/typography/utils";
 
 .navbar {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1056px;
   position: relative;
   text-align: center;
 }
@@ -51,7 +54,7 @@
     flex-grow: 0;
   }
 
-  .item-central {
+  .navbar__item--central {
     flex-grow: 1;
     display: flex;
     justify-content: center;

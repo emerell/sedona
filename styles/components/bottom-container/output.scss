@@ -8,7 +8,7 @@
 }
 
 .bottom-container__title {
-  padding: 3.75rem 7rem 2.31rem;
+  padding: 3.75rem 0 2.31rem;
   line-height: 2.25rem;
   font-size: $typography-h1;
   color: $color-primary-text;
@@ -19,8 +19,7 @@
 }
 
 .bottom-container___description {
-  margin-right: 1rem;
-  margin-left: 1rem;
+
   line-height: 1.5rem;
   padding-bottom: 8.4rem;
   font-size: $typography-text-small;

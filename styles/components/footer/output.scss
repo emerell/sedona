@@ -5,8 +5,6 @@
 .footer {
   padding: 2rem 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: $color-text;
 }
 
@@ -19,14 +17,15 @@
 
 .footer__info {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 
-  path{
+  path {
     fill: $color-primary-text;
   }
 }
 
- .footer__created {
+
+.footer__created {
    color: $color-primary-text;
    font-size: $typography-text-small;
    text-transform: uppercase;
@@ -35,14 +34,35 @@
 
 .footer-links {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-
 }
-//
-//.footer-links__item {
-//  background-color: $color-primary;
-//}
 
-.mr-6 {
-  margin-right: 6px;
+.footer-links__item {
+  background-color: $color-primary;
+  padding: 0.875rem;
+  display: flex;
+  height: 3rem;
+  width: 2.875rem;
+}
+
+.mx-5 {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@include mobile {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 322px;
+  }
+}
+
+@include tablet {
+  .footer {
+    justify-content: space-around;
+    align-items: center;
+  }
 }

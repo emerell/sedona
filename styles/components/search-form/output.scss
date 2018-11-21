@@ -3,19 +3,20 @@
 @import  "../../units/colors/utils";
 
 
-@include mobile {
-  .search {
-    width: 100%;
-  }
-}
 .search {
-  margin-left: auto;
-  margin-right: auto;
-  width: 568px;
+  width: 100%;
   position: absolute;
   left: 0;
   right: 0;
   top: 69%;
+
+}
+@include tablet {
+  .search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 568px;
+  }
 }
 
 .search-form {
@@ -41,54 +42,16 @@
   text-align: center;
 }
 
-.search-form__fields {
-  padding: 2.5rem 3.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .search-form__fields--row {
   display: flex;
   justify-content: space-between;
-}
-
-.input-group__counter {
-  cursor: pointer;
-  color:$color-form-icon;
-  font-size: $typography-h2;
-  font-weight: bold;
-  width: 38px;
-  border:none;
-  background-color: inherit;
-  outline: none;
-  position: absolute;
-}
-
-.input-group__field {
-  position: relative;
-}
-
-.input-group--right {
-  margin-left: auto;
-}
-
-.input-group__counter--left {
-  bottom: 0;
-  left: 12px;
-}
-
-.input-group__counter--right {
-  bottom: 0;
-  right: 0;
-}
-
-.input-group__title {
-  margin-right: 1.3rem;
+  flex-wrap: wrap;
 }
 
 .search-form__button {
-  margin-right: 3.5rem;
-  margin-left: 3.5rem;
-  margin-bottom: 3.5rem;
-  width: 457px;
+  min-width: 100%;
+}
+
+.mb-55 {
+  margin-bottom: 55px;
 }
