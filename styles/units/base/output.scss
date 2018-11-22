@@ -14,32 +14,3 @@ body {
   box-shadow: 0 0 60px -5px rgba(0, 0, 0, 0.2);
   background-color: $color-text;
 }
-
-.section-y-lg {
-  padding-left: 4.56rem;
-  padding-right: 4.56rem;
-}
-
-@include tablet {
-  .tablet\:section-xy-sm {
-    padding: 3.38rem 3rem 5.4rem;
-  }
-}
-
-
-.section-xy {
-  padding: 3.5rem;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-
-@include mobile{
-  .mobile\:section-xy-sm {
-    padding: 1rem 0;
-  }
-}

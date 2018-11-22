@@ -1,0 +1,26 @@
+.checkbox {
+  position: relative;
+}
+.checkbox input[type=checkbox] {
+  display:none;
+}
+.checkbox label:before {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  display: block;
+  height: 23px;
+  width: 23px;
+  background-image: url("../icons/checkbox-off.svg");
+  background-repeat: no-repeat;
+}
+.checkbox input[type=checkbox]:checked + label:before {
+  height: 23px;
+  width: 27px;
+  background-image: url("../icons/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+.checkbox label {
+  padding-left: 40px;
+}

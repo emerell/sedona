@@ -1,0 +1,80 @@
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+
+fieldset {
+  border: 0 none;
+}
+
+.filter-box {
+  width: 100%;
+  min-height: 220px;
+  background-image: url("../images/rocks-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-text;
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+}
+
+.filter__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__item-title {
+  font-size: $typography-text-medium;
+  font-weight: bold;
+}
+
+.filter__item-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 117px;
+}
+
+.filter__item-price {
+  height: 38px;
+  border: 2px solid $color-text;
+  width: 319px;
+  display: flex;
+  text-align: center;
+}
+
+.filter__item-price-from {
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding: 6px 10px;
+}
+
+.filter__item-price-to {
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding: 6px 10px;
+}
+
+.filter__vertical-line {
+  margin: 5px 0;
+  border: 1px solid $color-text;
+}
+
+.filter__button {
+  padding: 0.625rem;
+  color: $color-text;
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+  border: 2px solid $color-text;
+  background: transparent;
+  width: 138px;
+}
+
+.filter__range {
+  width: 100%;
+}
+

@@ -1,0 +1,90 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+
+.section-y-lg {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+@include tablet {
+  .tablet\:section-xy-sm {
+    padding: 3.38rem 3rem 5.4rem;
+  }
+
+  .tablet\:section-x {
+    padding-left: 4.56rem;
+    padding-right: 4.56rem;
+  }
+}
+
+.section-xy {
+  padding: 3.5rem;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@include mobile{
+  .mobile\:section-y-sm {
+    padding: 1rem 0;
+  }
+
+  .mobile\:section-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.aitems-center {
+  align-items: center;
+}
+
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-7rem {
+  margin-right: 7.125rem;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.fgrow-1 {
+  flex-grow: 1;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  .tablet-only\:mr-auto {
+    margin-right: auto;
+  }
+
+  .tablet-only\:mb-15 {
+    margin-bottom: 15px;
+  }
+}
