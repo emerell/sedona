@@ -30,58 +30,53 @@
 </header>
 <main>
     <h1 class="visually-hidden ">Поиск гостиницы</h1>
-    <section class="section-y-lg mobile:section-x tablet:section-x filter-box">
+    <section class="section-y-lg section-x filter-box">
         <h2 class="visually-hidden">Выбор типа и стоимости желья</h2>
-        <form id="filter-hotels" method="get">
-            <div class="filter">
-                <fieldset class="filter__item mr-7rem tablet-only:mb-15">
+        <form id="filter-hotels" method="get" class="filter">
+                <fieldset class="filter__item tablet:mr-7rem mobile:mr-3rem hidden-desktop:mb-15">
                     <legend class="filter__item-title mb-25">Инфраструктура:</legend>
                     <div class="filter__item-fields">
+                    <span class="checkbox">
+                        <input type="checkbox" name="infrastructure" checked value="pool" id="filter-hotels-pool"/>
+                        <label for="filter-hotels-pool" class="checkbox__label">Бассейн</label>
+                    </span>
                         <span class="checkbox">
-                            <input type="checkbox" name="infrastructure" checked value="pool" id="filter-hotels-pool"/>
-                            <label for="filter-hotels-pool">Бассейн</label>
-                        </span>
+                        <input type="checkbox" name="infrastructure" value="parking" id="filter-hotels-parking"/>
+                        <label for="filter-hotels-parking" class="checkbox__label">Парковка</label>
+                    </span>
                         <span class="checkbox">
-                            <input type="checkbox" name="infrastructure" value="parking" id="filter-hotels-parking"/>
-                            <label for="filter-hotels-parking">Парковка</label>
-                        </span>
-                        <span class="checkbox">
-                            <input type="checkbox" name="infrastructure" value="wi-fi" id="filter-hotels-wi-fi">
-                            <label for="filter-hotels-wi-fi">wi-fi</label>
-                        </span>
+                        <input type="checkbox" name="infrastructure" value="wi-fi" id="filter-hotels-wi-fi">
+                        <label for="filter-hotels-wi-fi" class="checkbox__label">wi-fi</label>
+                    </span>
                     </div>
                 </fieldset>
-                <fieldset class="filter__item mr-7rem tablet-only:mb-15">
+                <fieldset class="filter__item hidden-desktop:mb-15">
                     <legend class="filter__item-title mb-25">Тип жилья:</legend>
                     <div class="filter__item-fields">
+                    <span class="checkbox">
+                        <input type="checkbox" name="type-of-accommodation" checked value="hotel" id="filter-hotels-hotel">
+                        <label for="filter-hotels-hotel" class="checkbox__label">Гостиница</label>
+                    </span>
                         <span class="checkbox">
-                            <input type="checkbox" name="type-of-accommodation" checked value="hotel" id="filter-hotels-hotel">
-                            <label for="filter-hotels-hotel">Гостиница</label>
-                        </span>
+                        <input type="checkbox" name="type-of-accommodation" checked value="motel" id="filter-hotels-motel">
+                        <label for="filter-hotels-motel" class="checkbox__label">Мотель</label>
+                    </span>
                         <span class="checkbox">
-                            <input type="checkbox" name="type-of-accommodation" checked value="motel" id="filter-hotels-motel">
-                            <label for="filter-hotels-motel">Мотель</label>
-                        </span>
-                        <span class="checkbox">
-                            <input type="checkbox" name="type-of-accommodation" checked value="apartments" id="filter-hotels-apartaments">
-                            <label for="filter-hotels-apartaments">Апартаменты</label>
-                        </span>
+                        <input type="checkbox" name="type-of-accommodation" checked value="apartments" id="filter-hotels-apartaments">
+                        <label for="filter-hotels-apartaments" class="checkbox__label">Апартаменты</label>
+                    </span>
                     </div>
                 </fieldset>
-                <div class="filter__item fgrow-1 aitems-center">
-                    <div class="ml-auto tablet-only:mr-auto flex-item">
-                        <fieldset class="mb-30">
-                            <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
-                            <span class="filter__item-price mb-18">
+            <div class="filter__item items-center hidden-desktop:flex-basis hidden-desktop:mt-1rem desktop:ml-auto">
+                    <fieldset class="mb-30">
+                        <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
+                        <span class="filter__item-price mb-18">
                             <span class="filter__item-price-from">от 0</span>
-                            <span class="filter__vertical-line"></span>
                             <span class="filter__item-price-to">до 3000</span>
                         </span>
-                            <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
-                        </fieldset>
-                        <button type="submit" class="filter__button">Показать</button>
-                    </div>
-                </div>
+                        <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
+                    </fieldset>
+                    <button type="submit" class="filter__button">Показать</button>
             </div>
         </form>
     </section>

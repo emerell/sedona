@@ -1682,6 +1682,15 @@ body {
     padding-left: 4.56rem;
     padding-right: 4.56rem;
   }
+
+  .section-x {
+    padding-left: 4.56rem;
+    padding-right: 4.56rem;
+  }
+
+  .tablet\:mr-7rem {
+    margin-right: 7rem;
+  }
 }
 .section-xy {
   padding: 3.5rem;
@@ -1704,8 +1713,17 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .section-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mobile\:mr-3rem {
+    margin-right: 3rem;
+  }
 }
-.aitems-center {
+.items-center {
   align-items: center;
 }
 
@@ -1733,7 +1751,7 @@ body {
   margin-bottom: 30px;
 }
 
-.fgrow-1 {
+.flex-grow {
   flex-grow: 1;
 }
 
@@ -1743,13 +1761,30 @@ body {
   align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  .tablet-only\:mr-auto {
+@media screen and (max-width: 1087px) {
+  .hidden-desktop\:mr-auto {
     margin-right: auto;
   }
 
-  .tablet-only\:mb-15 {
+  .hidden-desktop\:mb-15 {
     margin-bottom: 15px;
+  }
+
+  .hidden-desktop\:mr-2rem {
+    margin-right: 2rem;
+  }
+
+  .hidden-desktop\:flex-basis {
+    flex-basis: 100%;
+  }
+
+  .hidden-desktop\:mt-1rem {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .desktop\:ml-auto {
+    margin-left: auto;
   }
 }
 .navbar {
@@ -2303,6 +2338,7 @@ fieldset {
 
 .filter {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   color: #FFF;
   font-size: 0.875rem;
@@ -2312,6 +2348,13 @@ fieldset {
 .filter__item {
   display: flex;
   flex-direction: column;
+}
+
+.filter__item-top {
+  margin-bottom: 2rem;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .filter__item-title {
@@ -2334,6 +2377,14 @@ fieldset {
   text-align: center;
 }
 
+.filter__item-price::before {
+  content: "";
+  margin: 5px 0;
+  border: 1px solid #FFF;
+  position: relative;
+  left: 50%;
+}
+
 .filter__item-price-from {
   flex-grow: 1;
   flex-basis: 50%;
@@ -2344,11 +2395,6 @@ fieldset {
   flex-grow: 1;
   flex-basis: 50%;
   padding: 6px 10px;
-}
-
-.filter__vertical-line {
-  margin: 5px 0;
-  border: 1px solid #FFF;
 }
 
 .filter__button {
@@ -2689,7 +2735,7 @@ fieldset {
   display: none;
 }
 
-.checkbox label:before {
+.checkbox__label::before {
   cursor: pointer;
   content: "";
   position: absolute;
@@ -2700,14 +2746,14 @@ fieldset {
   background-repeat: no-repeat;
 }
 
-.checkbox input[type=checkbox]:checked + label:before {
+.checkbox input[type=checkbox]:checked + .checkbox__label::before {
   height: 23px;
   width: 27px;
   background-image: url("../icons/checkbox-on.svg");
   background-repeat: no-repeat;
 }
 
-.checkbox label {
+.checkbox__label {
   padding-left: 40px;
 }
 

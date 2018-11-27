@@ -4,7 +4,7 @@
 .checkbox input[type=checkbox] {
   display:none;
 }
-.checkbox label:before {
+.checkbox__label::before {
   cursor: pointer;
   content: '';
   position: absolute;
@@ -14,13 +14,13 @@
   background-image: url("../icons/checkbox-off.svg");
   background-repeat: no-repeat;
 }
-.checkbox input[type=checkbox]:checked + label:before {
+.checkbox input[type=checkbox]:checked + .checkbox__label::before {
   height: 23px;
   width: 27px;
   background-image: url("../icons/checkbox-on.svg");
   background-repeat: no-repeat;
 }
 
-.checkbox label {
+.checkbox__label {
   padding-left: 40px;
 }
