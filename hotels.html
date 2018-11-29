@@ -33,78 +33,91 @@
     <section class="section-y-lg section-x filter-box">
         <h2 class="visually-hidden">Выбор типа и стоимости желья</h2>
         <form id="filter-hotels" method="get" class="filter">
-                <fieldset class="filter__item tablet:mr-7rem mobile:mr-3rem hidden-desktop:mb-15">
-                    <legend class="filter__item-title mb-25">Инфраструктура:</legend>
-                    <div class="filter__item-fields">
+            <fieldset class="filter__item tablet:mr-7rem mobile:mr-3rem hidden-desktop:mb-15">
+                <legend class="filter__item-title mb-25">Инфраструктура:</legend>
+                <div class="filter__item-fields">
                     <span class="checkbox">
                         <input type="checkbox" name="infrastructure" checked value="pool" id="filter-hotels-pool"/>
                         <label for="filter-hotels-pool" class="checkbox__label">Бассейн</label>
                     </span>
-                        <span class="checkbox">
+                    <span class="checkbox">
                         <input type="checkbox" name="infrastructure" value="parking" id="filter-hotels-parking"/>
                         <label for="filter-hotels-parking" class="checkbox__label">Парковка</label>
                     </span>
-                        <span class="checkbox">
+                    <span class="checkbox">
                         <input type="checkbox" name="infrastructure" value="wi-fi" id="filter-hotels-wi-fi">
                         <label for="filter-hotels-wi-fi" class="checkbox__label">wi-fi</label>
                     </span>
-                    </div>
-                </fieldset>
-                <fieldset class="filter__item hidden-desktop:mb-15">
-                    <legend class="filter__item-title mb-25">Тип жилья:</legend>
-                    <div class="filter__item-fields">
+                </div>
+            </fieldset>
+            <fieldset class="filter__item hidden-desktop:mb-15">
+                <legend class="filter__item-title mb-25">Тип жилья:</legend>
+                <div class="filter__item-fields">
+                        <span class="checkbox">
+                            <input type="checkbox" name="type-of-accommodation" checked value="hotel" id="filter-hotels-hotel">
+                            <label for="filter-hotels-hotel" class="checkbox__label">Гостиница</label>
+                        </span>
                     <span class="checkbox">
-                        <input type="checkbox" name="type-of-accommodation" checked value="hotel" id="filter-hotels-hotel">
-                        <label for="filter-hotels-hotel" class="checkbox__label">Гостиница</label>
-                    </span>
-                        <span class="checkbox">
-                        <input type="checkbox" name="type-of-accommodation" checked value="motel" id="filter-hotels-motel">
-                        <label for="filter-hotels-motel" class="checkbox__label">Мотель</label>
-                    </span>
-                        <span class="checkbox">
-                        <input type="checkbox" name="type-of-accommodation" checked value="apartments" id="filter-hotels-apartaments">
-                        <label for="filter-hotels-apartaments" class="checkbox__label">Апартаменты</label>
-                    </span>
-                    </div>
-                </fieldset>
+                            <input type="checkbox" name="type-of-accommodation" checked value="motel" id="filter-hotels-motel">
+                            <label for="filter-hotels-motel" class="checkbox__label">Мотель</label>
+                        </span>
+                    <span class="checkbox">
+                            <input type="checkbox" name="type-of-accommodation" checked value="apartments" id="filter-hotels-apartaments">
+                            <label for="filter-hotels-apartaments" class="checkbox__label">Апартаменты</label>
+                        </span>
+                </div>
+            </fieldset>
             <div class="filter__item items-center hidden-desktop:flex-basis hidden-desktop:mt-1rem desktop:ml-auto">
-                    <fieldset class="mb-30">
-                        <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
-                        <span class="filter__item-price mb-18">
+                <fieldset class="mb-30">
+                    <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
+                    <span class="filter__item-price mb-18">
                             <span class="filter__item-price-from">от 0</span>
                             <span class="filter__item-price-to">до 3000</span>
                         </span>
-                        <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
-                    </fieldset>
-                    <button type="submit" class="filter__button">Показать</button>
+                    <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
+                </fieldset>
+                <button type="submit" class="filter__button">Показать</button>
             </div>
         </form>
     </section>
     <section>
-        <h2>Найденные гостиницы</h2>
-        <section>
-            <span>Найдено:</span>
-            <span>3</span>
-            <fieldset>
-                <legend>Сортировка:</legend>
-                <label>По цене
-                    <input type="radio" name="sort" value="price" form="filter-hotels">
-                </label>
-                <label>По типу
-                    <input type="radio" name="sort" value="type" form="filter-hotels">
-                </label>
-                <label>По рейтингу
-                    <input type="radio" name="sort" value="rating" form="filter-hotels">
-                </label>
+        <h2 class="visually-hidden">Найденные гостиницы</h2>
+        <section class="section-x section-y-lg result">
+            <h3 class="mobile:mb-10">
+                <span class="title-lg">Найдено:</span>
+                <span class="title-lg">3</span>
+            </h3>
+            <fieldset class="sort">
+                <span class="sort__title">Сортировка:</span>
+                <span class="sort__item">
+                    <input type="radio" name="sort" value="price" checked form="filter-hotels" id="filter-hotels-price">
+                    <label class="sort__item-label" for="filter-hotels-price">По цене</label>
+                </span>
+                <span class="sort__item">
+                    <input type="radio" name="sort" value="type" form="filter-hotels" id="filter-hotels-type">
+                    <label class="sort__item-label" for="filter-hotels-type">По типу</label>
+                </span>
+                <span class="sort__item">
+                    <input type="radio" name="sort" value="rating" form="filter-hotels" id="filter-hotels-rating">
+                    <label class="sort__item-label" for="filter-hotels-rating">По рейтингу</label>
+                </span>
             </fieldset>
-            <fieldset>
-                <legend>Порядок следования</legend>
-                <label>Сортировать по возрастанию
-                    <input type="radio" name="order" value="order-asc" form="filter-hotels">
-                </label>
-                <label>Сортировать по возрастанию
-                    <input type="radio" name="order" value="order-desc" form="filter-hotels">
-                </label>
+            <fieldset class="tablet:ml-auto">
+                <legend class="visually-hidden">Порядок следования</legend>
+                <div class="result__pagination">
+                    <label for="filter-hotels-order-asc" class="result__pagination-item tablet:mr-10">
+                        <input type="radio" name="order" value="order-asc" form="filter-hotels" id="filter-hotels-order-asc">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                            <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+                        </svg>
+                    </label>
+                    <label for="filter-hotels-order-desc" class="result__pagination-item">
+                        <input type="radio" name="order" value="order-desc" checked form="filter-hotels" id="filter-hotels-order-desc">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                            <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                        </svg>
+                    </label>
+                </div>
             </fieldset>
         </section>
         <ul>

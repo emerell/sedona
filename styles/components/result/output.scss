@@ -1,0 +1,67 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.sort__title {
+  font-size: $typography-text-x-small;
+  line-height: $typography-text-large;
+  text-transform: uppercase;
+  color: $color-primary-text;
+  margin: 0.5rem;
+  @include tablet {
+    margin-left: 3rem;
+    margin-right: 2.5rem;
+  }
+}
+
+.sort__item input[type=radio] {
+  display:none;
+}
+
+.sort__item-label {
+  margin: 0.5rem;
+  font-size: $typography-text-x-small;
+  line-height: $typography-text-large;
+  text-transform: uppercase;
+  color: $color-button-text;
+  border-bottom: 1px solid $color-primary;
+  cursor: pointer;
+  @include tablet {
+    margin: 0.625rem 1rem;
+  }
+}
+
+.sort__item input[type=radio]:checked + .sort__item-label {
+  color: $color-primary;
+  border: none;
+}
+
+.result__pagination-item input[type=radio]  {
+  display:none;
+}
+
+.result__pagination-item input[type=radio]:checked + .svg {
+  path {
+    fill: $color-primary;
+  }
+}
+
+.result__pagination {
+  @include mobile {
+    margin-top: 10px;
+    margin-right: auto;
+  }
+}
+
+.result__pagination-item {
+  cursor: pointer;
+}

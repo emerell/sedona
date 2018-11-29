@@ -1684,12 +1684,20 @@ body {
   }
 
   .section-x {
-    padding-left: 4.56rem;
-    padding-right: 4.56rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .tablet\:mr-7rem {
     margin-right: 7rem;
+  }
+
+  .tablet\:ml-auto {
+    margin-left: auto;
+  }
+
+  .tablet\:mr-10 {
+    margin-right: 10px;
   }
 }
 .section-xy {
@@ -1721,6 +1729,10 @@ body {
 
   .mobile\:mr-3rem {
     margin-right: 3rem;
+  }
+
+  .mobile\:mb-10 {
+    margin-bottom: 10px;
   }
 }
 .items-center {
@@ -1786,7 +1798,20 @@ body {
   .desktop\:ml-auto {
     margin-left: auto;
   }
+
+  .section-x {
+    padding-left: 4.56rem;
+    padding-right: 4.56rem;
+  }
 }
+.title-lg {
+  font-size: 1.3125rem;
+  line-height: 1.625rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
 .navbar {
   margin-left: auto;
   margin-right: auto;
@@ -2409,6 +2434,98 @@ fieldset {
 
 .filter__range {
   width: 100%;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.is-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 769px), print {
+  .result {
+    flex-direction: row;
+  }
+}
+
+.sort__title {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0.5rem;
+}
+@media screen and (min-width: 769px), print {
+  .sort__title {
+    margin-left: 3rem;
+    margin-right: 2.5rem;
+  }
+}
+
+.sort__item input[type=radio] {
+  display: none;
+}
+
+.sort__item-label {
+  margin: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+  color: #666;
+  border-bottom: 1px solid #81b3d2;
+  cursor: pointer;
+}
+@media screen and (min-width: 769px), print {
+  .sort__item-label {
+    margin: 0.625rem 1rem;
+  }
+}
+
+.sort__item input[type=radio]:checked + .sort__item-label {
+  color: #81b3d2;
+  border: none;
+}
+
+.result__pagination-item input[type=radio] {
+  display: none;
+}
+
+.result__pagination-item input[type=radio]:checked + .svg path {
+  fill: #81b3d2;
+}
+
+@media screen and (max-width: 768px) {
+  .result__pagination {
+    margin-top: 10px;
+    margin-right: auto;
+  }
+}
+
+.result__pagination-item {
+  cursor: pointer;
 }
 
 @keyframes spinAround {
