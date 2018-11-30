@@ -68,15 +68,15 @@
                     </div>
                 </fieldset>
             <div class="filter__item items-center hidden-desktop:flex-basis hidden-desktop:mt-1rem desktop:ml-auto">
-                    <fieldset class="mb-30">
-                        <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
-                        <span class="filter__item-price mb-18">
-                            <span class="filter__item-price-from">от 0</span>
-                            <span class="filter__item-price-to">до 3000</span>
-                        </span>
-                        <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
-                    </fieldset>
-                    <button type="submit" class="filter__button">Показать</button>
+                <fieldset class="mb-30">
+                    <legend class="filter__item-title mb-10">Стоимость в сутки (P):</legend>
+                    <span class="filter__item-price mb-18">
+                        <span class="filter__item-price-from">от 0</span>
+                        <span class="filter__item-price-to">до 3000</span>
+                    </span>
+                    <input type="range" name="range" class="range" min="0" max="3500" value="3000" >
+                </fieldset>
+                <button type="submit" class="filter__button">Показать</button>
             </div>
         </form>
     </section>
@@ -107,42 +107,66 @@
                 </label>
             </fieldset>
         </section>
-        <ul>
-            <li>
-                <img width="135" height="90" src="images/amara.png" alt="Amara Resort">
-                <h3>Amara Resort & Spa</h3>
-                <p>
-                    <span>Гостиница</span>
-                    <span>От 4000 Р.</span>
-                </p>
-                <a href="#">Подробнее</a>
-                <a href="#">Забронировать</a>
-                <span aria-label="Рейтинг готелей"></span>
-                <span>Рейтинг:8.5</span>
+        <ul class="hotels-list">
+            <li class="hotel-item section-y-lg section-x top-divider">
+                <img class="hotel-item__image" width="135" height="90" src="images/amara.png" alt="Amara Resort">
+                <div class="hotel-info">
+                    <h3 class="hotel-info__title">Amara Resort & Spa</h3>
+                    <p class="hotel-info__description">
+                        <span>Гостиница</span>
+                        <span>От 4000 Р.</span>
+                    </p>
+                    <a href="#" class="hotel-info__button button">Подробнее</a>
+                    <a href="#" class="hotel-info__button button button--secondary">Забронировать</a>
+                </div>
+                <div class="rating">
+                    <span aria-label="Рейтинг готелей" class="rating-hotel">
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                    </span>
+                    <span class="rating-general">Рейтинг: 8.5</span>
+                </div>
             </li>
-            <li>
-                <img width="135" height="90" src="images/amara.png" alt="Desert Quail Inn">
-                <h3>Desert Quail Inn</h3>
-                <p>
-                    <span>Мотель</span>
-                    <span>От 3000 Р.</span>
-                </p>
-                <a href="#">Подробнее</a>
-                <a href="#">Забронировать</a>
-                <span></span>
-                <span>Рейтинг:8.9</span>
+            <li class="hotel-item section-y-lg section-x">
+                <img class="hotel-item__image" width="135" height="90" src="images/quail.png" alt="Desert Quail Inn">
+                <div class="hotel-info">
+                    <h3 class="hotel-info__title">Desert Quail Inn</h3>
+                    <p class="hotel-info__description">
+                        <span>Мотель</span>
+                        <span>От 3000 Р.</span>
+                    </p>
+                    <a href="#" class="hotel-info__button button">Подробнее</a>
+                    <a href="#" class="hotel-info__button button button--secondary">Забронировать</a>
+                </div>
+                <div class="rating">
+                    <span aria-label="Рейтинг готелей" class="rating-hotel">
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                    </span>
+                    <span class="rating-general">Рейтинг: 8.9</span>
+                </div>
             </li>
-            <li>
-                <img width="135" height="90" src="images/amara.png" alt="Villas At Poco Diablo">
-                <h3>Villas At Poco Diablo</h3>
-                <p>
-                    <span>Апартаменты</span>
-                    <span>От 2000 Р.</span>
-                </p>
-                <a href="#">Подробнее</a>
-                <a href="#">Забронировать</a>
-                <span></span>
-                <span>Рейтинг:9.2</span>
+            <li class="hotel-item section-y-lg section-x">
+                <img class="hotel-item__image" width="135" height="90" src="images/poco_diablo.png" alt="Villas At Poco Diablo">
+                <div class="hotel-info">
+                    <h3 class="hotel-info__title">Villas At Poco Diablo</h3>
+                    <p class="hotel-info__description">
+                        <span>Апартаменты</span>
+                        <span>От 2000 Р.</span>
+                    </p>
+                    <a href="#" class="hotel-info__button button">Подробнее</a>
+                    <a href="#" class="hotel-info__button button button--secondary">Забронировать</a>
+                </div>
+                <div class="rating">
+                    <span aria-label="Рейтинг готелей" class="rating-hotel">
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                        <img src="icons/form-star.svg" alt="rating star"/>
+                    </span>
+                    <span class="rating-general">Рейтинг: 9.2</span>
+                </div>
             </li>
         </ul>
     </section>

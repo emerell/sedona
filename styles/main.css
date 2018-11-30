@@ -1743,6 +1743,10 @@ body {
   margin-bottom: 10px;
 }
 
+.mr-10 {
+  margin-right: 10px;
+}
+
 .mb-18 {
   margin-bottom: 18px;
 }
@@ -1787,6 +1791,10 @@ body {
     margin-left: auto;
   }
 }
+.top-divider {
+  border-top: 1px solid #e5e5e5;
+}
+
 .navbar {
   margin-left: auto;
   margin-right: auto;
@@ -2208,6 +2216,7 @@ body {
 }
 
 .search-form__button {
+  padding: 1.5rem 0;
   min-width: 100%;
 }
 
@@ -2409,6 +2418,98 @@ fieldset {
 
 .filter__range {
   width: 100%;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.is-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hotel-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+@media screen and (max-width: 768px) {
+  .hotel-item {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .hotel-item {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .hotel-item__image {
+    margin-right: 2rem;
+  }
+}
+
+.hotel-info__title {
+  font-size: 1.3125rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.625rem;
+}
+@media screen and (max-width: 768px) {
+  .hotel-info__title {
+    margin-top: 0.5rem;
+  }
+}
+
+.hotel-info__description {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .hotel-info__description {
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .hotel-info__description {
+    margin-top: 0.25rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
+.hotel-info__button {
+  padding: 5px 18px;
+  display: block;
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 768px) {
+  .hotel-info__button {
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .hotel-info__button {
+    display: inline-block;
+  }
 }
 
 @keyframes spinAround {
@@ -2718,13 +2819,16 @@ fieldset {
   }
 }
 .button {
-  padding: 1.5rem 0;
   color: #FFF;
   background-color: #81b3d2;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button--secondary {
+  background-color: #766357;
 }
 
 .checkbox {
@@ -2775,6 +2879,67 @@ fieldset {
   background-repeat: no-repeat;
   cursor: pointer;
   -webkit-appearance: none;
+}
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.is-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.is-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .rating {
+    align-items: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .rating {
+    flex-direction: column;
+    margin-left: auto;
+  }
+}
+
+.rating-general {
+  padding: 5px 18px;
+  background-color: #f2f2f2;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .rating-general {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .rating-hotel {
+    margin-left: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

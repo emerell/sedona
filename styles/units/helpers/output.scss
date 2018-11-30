@@ -1,4 +1,5 @@
 @import "../../vendors/bulma/sass/utilities/_all.sass";
+@import  "../../units/colors/utils";
 
 .section-y-lg {
   padding-top: 1.875rem;
@@ -76,6 +77,10 @@
   margin-bottom: 10px;
 }
 
+.mr-10 {
+ margin-right: 10px;
+}
+
 .mb-18 {
   margin-bottom: 18px;
 }
@@ -123,4 +128,7 @@
   }
 }
 
+.top-divider {
+  border-top: 1px solid $color-divider;
+}
 
