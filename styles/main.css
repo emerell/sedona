@@ -2460,14 +2460,18 @@ fieldset {
   top: 0;
 }
 
+@media only screen and (max-width: 350px) {
+  .sort__item {
+    display: block;
+  }
+}
 .result {
   display: flex;
-  flex-direction: column;
   text-align: center;
 }
-@media screen and (min-width: 769px), print {
+@media screen and (max-width: 768px) {
   .result {
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -2476,7 +2480,11 @@ fieldset {
   line-height: 1.125rem;
   text-transform: uppercase;
   color: #000;
-  margin: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .sort__title {
+    margin: 0.5rem;
+  }
 }
 @media screen and (min-width: 769px), print {
   .sort__title {
@@ -2485,12 +2493,11 @@ fieldset {
   }
 }
 
-.sort__item input[type=radio] {
+.sort__item .sort__item-input {
   display: none;
 }
 
 .sort__item-label {
-  margin: 0.5rem;
   font-size: 0.75rem;
   line-height: 1.125rem;
   text-transform: uppercase;
@@ -2498,22 +2505,27 @@ fieldset {
   border-bottom: 1px solid #81b3d2;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .sort__item-label {
+    margin: 0.5rem;
+  }
+}
 @media screen and (min-width: 769px), print {
   .sort__item-label {
     margin: 0.625rem 1rem;
   }
 }
 
-.sort__item input[type=radio]:checked + .sort__item-label {
+.sort__item .sort__item-input:checked + .sort__item-label {
   color: #81b3d2;
   border: none;
 }
 
-.result__pagination-item input[type=radio] {
+.result__pagination-item .result__pagination-input {
   display: none;
 }
 
-.result__pagination-item input[type=radio]:checked + .svg path {
+.result__pagination-item .result__pagination-input:checked + .svg path {
   fill: #81b3d2;
 }
 

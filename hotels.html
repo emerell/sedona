@@ -80,25 +80,25 @@
             </div>
         </form>
     </section>
-    <section>
-        <h2 class="visually-hidden">Найденные гостиницы</h2>
+    <section class="hotels-result-list">
+        <h2 class="visually-hidden hotels-result-list__title">Найденные гостиницы</h2>
         <section class="section-x section-y-lg result">
-            <h3 class="mobile:mb-10">
+            <h3 class="mobile:mb-10 result__title">
                 <span class="title-lg">Найдено:</span>
                 <span class="title-lg">3</span>
             </h3>
             <fieldset class="sort">
                 <span class="sort__title">Сортировка:</span>
                 <span class="sort__item">
-                    <input type="radio" name="sort" value="price" checked form="filter-hotels" id="filter-hotels-price">
+                    <input class="sort__item-input" type="radio" name="sort" value="price" checked form="filter-hotels" id="filter-hotels-price">
                     <label class="sort__item-label" for="filter-hotels-price">По цене</label>
                 </span>
                 <span class="sort__item">
-                    <input type="radio" name="sort" value="type" form="filter-hotels" id="filter-hotels-type">
+                    <input class="sort__item-input" type="radio" name="sort" value="type" form="filter-hotels" id="filter-hotels-type">
                     <label class="sort__item-label" for="filter-hotels-type">По типу</label>
                 </span>
                 <span class="sort__item">
-                    <input type="radio" name="sort" value="rating" form="filter-hotels" id="filter-hotels-rating">
+                    <input class="sort__item-input" type="radio" name="sort" value="rating" form="filter-hotels" id="filter-hotels-rating">
                     <label class="sort__item-label" for="filter-hotels-rating">По рейтингу</label>
                 </span>
             </fieldset>
@@ -106,13 +106,13 @@
                 <legend class="visually-hidden">Порядок следования</legend>
                 <div class="result__pagination">
                     <label for="filter-hotels-order-asc" class="result__pagination-item tablet:mr-10">
-                        <input type="radio" name="order" value="order-asc" form="filter-hotels" id="filter-hotels-order-asc">
+                        <input class="result__pagination-input" type="radio" name="order" value="order-asc" form="filter-hotels" id="filter-hotels-order-asc">
                         <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10">
                             <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
                         </svg>
                     </label>
                     <label for="filter-hotels-order-desc" class="result__pagination-item">
-                        <input type="radio" name="order" value="order-desc" checked form="filter-hotels" id="filter-hotels-order-desc">
+                        <input class="result__pagination-input" type="radio" name="order" value="order-desc" checked form="filter-hotels" id="filter-hotels-order-desc">
                         <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="11" height="10">
                             <path fill="#cacaca" d="M5.5 10L0 0h11"/>
                         </svg>

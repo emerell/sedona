@@ -2,12 +2,17 @@
 @import "../../units/typography/utils";
 @import  "../../units/colors/utils";
 
+
+@media only screen and (max-width: 350px) {
+  .sort__item {
+    display: block;
+  }
+}
 .result {
   display: flex;
-  flex-direction: column;
   text-align: center;
-  @include tablet {
-    flex-direction: row;
+  @include mobile {
+    flex-direction: column;
   }
 }
 
@@ -16,40 +21,47 @@
   line-height: $typography-text-large;
   text-transform: uppercase;
   color: $color-primary-text;
-  margin: 0.5rem;
+
+  @include mobile {
+    margin: 0.5rem;
+  }
+
   @include tablet {
     margin-left: 3rem;
     margin-right: 2.5rem;
   }
 }
 
-.sort__item input[type=radio] {
+.sort__item .sort__item-input {
   display:none;
 }
 
 .sort__item-label {
-  margin: 0.5rem;
   font-size: $typography-text-x-small;
   line-height: $typography-text-large;
   text-transform: uppercase;
   color: $color-button-text;
   border-bottom: 1px solid $color-primary;
   cursor: pointer;
+  @include mobile {
+    margin: 0.5rem;
+  }
+  
   @include tablet {
     margin: 0.625rem 1rem;
   }
 }
 
-.sort__item input[type=radio]:checked + .sort__item-label {
+.sort__item .sort__item-input:checked + .sort__item-label {
   color: $color-primary;
   border: none;
 }
 
-.result__pagination-item input[type=radio]  {
+.result__pagination-item .result__pagination-input  {
   display:none;
 }
 
-.result__pagination-item input[type=radio]:checked + .svg {
+.result__pagination-item .result__pagination-input:checked + .svg {
   path {
     fill: $color-primary;
   }
