@@ -28,12 +28,6 @@ fieldset {
   flex-direction: column;
 }
 
-//@media only screen and (max-width: 350px) {
-//  .filter__item--left {
-//    margin-right: 15px;
-//  }
-//}
-
 .filter__item--left {
   @include mobile {
     margin-right: 3rem;
