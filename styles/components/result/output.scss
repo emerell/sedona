@@ -1,0 +1,70 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+
+@media only screen and (max-width: 350px) {
+  .sort__item {
+    display: block;
+  }
+}
+.search-result {
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.search-result__title {
+  font-size: $typography-text-x-small;
+  line-height: $typography-text-large;
+  text-transform: uppercase;
+  color: $color-primary-text;
+
+  @include mobile {
+    margin: 0.5rem;
+  }
+
+  @include tablet {
+    margin-right: 2.5rem;
+  }
+}
+
+.sort__item-label {
+  font-size: $typography-text-x-small;
+  line-height: $typography-text-large;
+  text-transform: uppercase;
+  color: $color-button-text;
+  border-bottom: 1px dotted $color-primary;
+  cursor: pointer;
+  @include mobile {
+    margin: 0.5rem;
+  }
+  
+  @include tablet {
+    margin: 0.625rem 1rem;
+  }
+}
+
+.sort__item .sort__item-input:checked + .sort__item-label {
+  color: $color-primary;
+  border: none;
+}
+
+.search-result__pagination-item .search-result__pagination-input:checked + .svg {
+  path {
+    fill: $color-primary;
+  }
+}
+
+.search-result__pagination {
+  @include mobile {
+    margin-top: 10px;
+    margin-right: auto;
+  }
+}
+
+.search-result__pagination-item {
+  cursor: pointer;
+}
