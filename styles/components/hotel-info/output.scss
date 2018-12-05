@@ -1,0 +1,46 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+@import "../../units/typography/utils";
+@import  "../../units/colors/utils";
+
+.hotel-info__title {
+  font-size: $typography-h2;
+  color: $color-primary-text;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.625rem;
+
+  @include mobile {
+    margin-top: 0.5rem;
+  }
+}
+
+.hotel-info__description {
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+
+  @include mobile {
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+  }
+
+  @include tablet {
+    margin-top: 0.15rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.hotel-info__button {
+  padding: 5px 18px;
+  display: block;
+  font-size: $typography-text-small;
+
+  @include mobile {
+    margin-bottom: 0.5rem;
+  }
+
+  @include tablet {
+    display: inline-block;
+  }
+}
