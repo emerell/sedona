@@ -2,11 +2,14 @@
 @import "../../units/typography/utils";
 
 .button {
-  padding: 1.5rem 0;
   color:  $color-text;
   background-color: $color-primary;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button--secondary {
+  background-color: $color-secondary;
 }

@@ -1,0 +1,18 @@
+@import "../../vendors/bulma/sass/utilities/_all.sass";
+.hotel-item {
+  border-bottom: 1px solid $color-divider;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.hotel-item__image {
+  @include tablet {
+    margin-right: 2rem;
+  }
+}
